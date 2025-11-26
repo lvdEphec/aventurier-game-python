@@ -1,2 +1,2 @@
 # aventurier-game-python
-Exercice git
+Exercice git en groupe  
