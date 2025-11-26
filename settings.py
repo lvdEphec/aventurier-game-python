@@ -28,7 +28,7 @@ END_POSITION = (GRID_SIZE - 1, GRID_SIZE - 1)  # Position d'arrivée (calculée 
 NB_MONSTERS = 7 # Nombre de monstres sur la carte
 
 # Configuration du Héros
-START_HP = 5       # Points de vie de départ
+START_HP = 6       # Points de vie de départ
 START_FORCE = 10   # Force de frappe de base
 START_AGILITY = 1  # Agilité de base
 START_MAGIC = 1    # Pouvoir magique de départ
