@@ -179,11 +179,14 @@ class Monster(Entity):
 
 class Hero(Entity):
     """Le héros contrôlé par le joueur"""
-    def __init__(self, hp, base_force):
+    def __init__(self, hp, base_force, magie, agility):
+
         super().__init__(START_POSITION, HERO_SYMBOL) # Départ selon START_POSITION
         self.hp = hp
         self.max_hp = hp  # HP maximum pour les potions
         self.base_force = base_force
+        self.agility = agility  # agilité qui augmente la force
+        self.magie = magie # magie qui augmente la force
         self.weapons = []  # Liste des armes équipées
         self.move_count = 0  # Compteur de mouvements
         self.monsters_defeated = 0  # Compteur de monstres vaincus
@@ -193,7 +196,8 @@ class Hero(Entity):
         """Force totale = force de base + somme des bonus des armes"""
         # Generator expression : calcule efficacement la somme sans créer de liste
         weapon_bonus = sum(weapon.force_bonus for weapon in self.weapons)
-        return self.base_force + weapon_bonus
+        return self.base_force + weapon_bonus + self.magie + self.agility
+
     
     @property
     def inventory(self):

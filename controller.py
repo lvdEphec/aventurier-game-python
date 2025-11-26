@@ -6,7 +6,7 @@ Peut fonctionner avec une ou plusieurs views simultanément.
 from typing import Type
 from models import Hero, Board
 from console_view import ConsoleView
-from settings import START_HP, START_FORCE, ENABLE_HIGHSCORE, PlayerAction
+from settings import START_HP, START_FORCE, START_MAGIC, START_AGILITY, ENABLE_HIGHSCORE, PlayerAction
 
 # Import optionnel du système de highscore
 try:
@@ -31,7 +31,8 @@ def main(view_class: Type[ConsoleView] = ConsoleView) -> None:
     else:
         highscore_manager = None
     
-    hero = Hero(hp=START_HP, base_force=START_FORCE)
+    hero = Hero(hp=START_HP, base_force=START_FORCE, magie=START_MAGIC, agility=START_AGILITY)  # Initialisation du héros avec magie
+
     board = Board()
     
     running = True

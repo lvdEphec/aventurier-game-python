@@ -30,6 +30,8 @@ NB_MONSTERS = 7 # Nombre de monstres sur la carte
 # Configuration du Héros
 START_HP = 7       # Points de vie de départ
 START_FORCE = 10   # Force de frappe de base
+START_AGILITY = 1  # Agilité de base
+START_MAGIC = 1    # Pouvoir magique de départ
 HERO_DAMAGE = 1    # Dégâts infligés par le héros quand il touche
 HERO_SYMBOL = "H"  # Symbole pour l'affichage
 
