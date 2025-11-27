@@ -1,3 +1,6 @@
+# fichiers locaux à ignorer par git
+highscores.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
